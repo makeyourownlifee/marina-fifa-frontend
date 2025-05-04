@@ -1,4 +1,4 @@
-fetch('https://marina-fifa-api.onrender.com/api/tournaments')
+fetch('https://marina-fifa-api.onrender.com/tournaments')
   .then(response => response.json())
   .then(data => {
     const list = document.getElementById('tournament-list');
