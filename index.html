@@ -3,20 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FIFA Bajnokság</title>
+  <title>FIFA Bajnokságok</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page-content" id="page-content">
-    <h1>Kezdőlap</h1>
-    <p>Üdvözöl a FIFA Bajnokság alkalmazás!</p>
-  </div>
+  <div class="container">
+    <h1>FIFA Bajnokságok</h1>
+    
+    <!-- Menüsor -->
+    <nav>
+      <ul>
+        <li><a href="#" id="home-link">Kezdőlap</a></li>
+        <li><a href="#" id="tournament-generator-link">Bajnokság Generálás</a></li>
+        <li><a href="#" id="add-result-link">Eredmények Felvitele</a></li>
+      </ul>
+    </nav>
 
-  <nav class="bottom-nav">
-    <a href="pages/home.html">🏠</a>
-    <a href="pages/generate.html">🎲</a>
-    <a href="pages/stats.html">📊</a>
-  </nav>
+    <!-- Különböző tartalmak -->
+    <div id="home-content">
+      <h2>Jelenlegi Bajnokságok</h2>
+      <ul id="tournament-list"></ul>
+    </div>
+
+    <div id="tournament-generator" style="display:none;">
+      <h2>Bajnokság Generálás</h2>
+      <form id="generate-tournament-form">
+        <input type="text" id="tournament-name" placeholder="Bajnokság neve" required />
+        <input type="number" id="tournament-year" placeholder="Év" required />
+        <button type="submit">Generálás</button>
+      </form>
+    </div>
+
+    <div id="add-result" style="display:none;">
+      <h2>Eredmények Felvitele</h2>
+      <form id="add-result-form">
+        <input type="text" id="team1-name" placeholder="Csapat 1" required />
+        <input type="text" id="team2-name" placeholder="Csapat 2" required />
+        <input type="number" id="team1-score" placeholder="Csapat 1 Eredménye" required />
+        <input type="number" id="team2-score" placeholder="Csapat 2 Eredménye" required />
+        <button type="submit">Eredmény Felvitele</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
